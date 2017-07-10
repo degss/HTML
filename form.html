@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Formulär</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <p> Tell us who you are: </p>
+        <p>
+            <label> First name: </label>
+            <input type="text" name="firstname" size="35" maxlength="30" />
+        </p>
+        <p>
+            <label> Last name: </label>
+            <input type="text" name="lastname" size="35" maxlength="30" />
+        </p>
+
+    </form>
+
+    <!-- om man skriver label och skriver en text, som
+ovan, tex first name så när man håller puspekaren 
+över first name på hemsidan så är det en pil och när 
+du klickar på denså markeras allt. Om du skiter i 
+label och bara skriver det som text innanför <p> så 
+som nedan så kommer textmarkerargrejen upp när du håller
+över first name. Bägge funkar men tror att det måste 
+vara en label för att man ska kunna göra texten 
+"first name" en del av rutan så att om man klickar där
+så är du inne i textrutan och kan skriva. -->
+
+    <form action="#" method="post">
+        <p> Enter your username and password: </p>
+        <p>
+            Username: <input type="text" name="username" size="30" /> Password: <input type="password" size="30" />
+        </p>
+
+
+
+        <p> Berätta ditt favvoskämt: <br />
+            <textarea name="favoritejoke" rows="6" cols="30">Skriv ditt skämt här
+                </textarea>
+        </p>
+
+
+
+        <p>Would you like to win a brand new iPhone 7? </p>
+        <p>
+            <input type="radio" name="win" value="yes" id="Yes" />
+            <label for="Yes">Yes</label>
+
+            <input type="radio" name="win" value="of course" id="OfCourse" />
+            <label for="OfCourse">Daaa</label>
+
+            <input type="radio" name="win" value="No ty" id="NoTY" />
+            <label for="NoTY">I'm an idiot</label>
+
+        </p>
+
+
+        <!-- Med hjälp av <label for="Marlboro">Marlboro</label>
+istället för bara label i början så kan man nu klicka
+på namnet marlboro för att klicka i eller klicka ur
+rutan. -->
+
+
+        <p> Vilka cigg röker du?</p>
+
+        <input type="checkbox" name="cigg" id="Marlboro" value="marlboro" checked />
+        <label for="Marlboro">Marlboro</label>
+
+        <input type="checkbox" name="cigg" value="prince" id="Prince" />
+        <label for="Prince">Prince</label>
+
+        <input type="checkbox" name="cigg" value="camel" id="Camel" />
+        <label for="Camel">Camel</label>
+
+
+
+        <!-- Kan ändra hur många som visas i dropdownmeny nedan
+mha size="4" inne i select, efter namnet. så 
+<select name="cars" size="5">
+ett multiple på samma plats gör det möjligt att
+markera flera alternativ i listan om man
+använder CTRL + click -->
+
+
+        <p> Choose what brand your car is: </p>
+        <select name="cars">
+                <option value="BMW" selected>BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Bentley">Bentley</option>
+            </select>
+
+
+        <!-- Här är bilarna gruperade i listan, används vid
+lista med många alternativ -->
+
+
+        <p> Choose what brand you would like your car to be: </p>
+        <select name="cars">
+                <optgroup label="German cars">
+                <option value="BMW" selected>BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedes">Mercedes</option>
+
+                <optgroup label="Other cars">
+                <option value="Volvo">Volvo</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Bentley">Bentley</option>
+            </select>
+
+
+
+        <p> Use the browse button to select your file: </p>
+        <p>
+            <input type="file" size="30" />
+        </p>
+
+
+
+        <fieldset>
+            <legend>Select the countries you've been to
+                <br /></legend>
+
+            <input type="checkbox" name="countries" value="norway" id="norway" />
+            <label for="norway">Norway </label>
+
+            <input type="checkbox" name="countries" value="denmark" id="denmark" />
+            <label for="denmark">Denmark </label>
+
+            <input type="checkbox" name="countries" value="finland" id="finland" />
+            <label for="finland">Finland </label>
+
+
+        </fieldset>
+
+        <p> Fill in your name: </p>
+        <label for="myName">*Name:</label>
+        <input type="text" name="myName" id="myName" required placeholder="Your first and last name" />
+
+        <p> Fill in your email: </p>
+        <label for="myEmail">E-mail:</label>
+        <input type="email" name="myEmail" id="myEmail" pattern="\S+@\S+\.\S+" placeholder="you@yourdomain.com" />
+
+        <p> Are you finished or do you want to start over? </p>
+        <input type="submit" value="Submit your answers" />
+        <input type="reset" value="Clear the form" />
+    </form>
+
+</body>
+
+</html>
